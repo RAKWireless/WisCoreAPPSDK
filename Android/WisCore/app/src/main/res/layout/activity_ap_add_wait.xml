@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWaitBgColor">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.rak.wiscore.component.MainMenuButton
+            android:id="@+id/ap_add_wait_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/back_nor"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="15dp"
+                android:textSize="@dimen/activity_choose_module_type_size"
+                android:textStyle="bold"
+                android:text="@string/main_add_wait_label1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:textSize="@dimen/activity_choose_module_text_size"
+                android:text="@string/main_add_wait_label2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+                <ProgressBar
+                    android:id="@+id/ap_add_wait_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:layout_weight="1"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progressDrawable="@drawable/progressbar_color"/>
+                <TextView
+                    android:id="@+id/ap_add_wait_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorWhite"
+                    android:text="0%"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/activity_choose_module_type_size"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

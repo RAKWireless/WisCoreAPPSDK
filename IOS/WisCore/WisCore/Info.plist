@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>APIKey</key>
+	<string>eyJhbGciOiJSU0EtU0hBMjU2IiwidmVyIjoiMSJ9.eyJ2ZXIiOiIzIiwiZW5kcG9pbnRzIjp7ImF1dGh6IjoiaHR0cHM6Ly93d3cuYW1hem9uLmNvbS9hcC9vYSIsInRva2VuRXhjaGFuZ2UiOiJodHRwczovL2FwaS5hbWF6b24uY29tL2F1dGgvbzIvdG9rZW4ifSwiY2xpZW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1vYTItY2xpZW50LjliMThkMDI1ODU4NDRjZTJiMWRiNzhlODI2OWZiNTYxIiwiYXBwRmFtaWx5SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi41NzhjODQ2MmY3ZTY0MTEyODRjOWNiYThiOGRmNzQ2ZiIsImJ1bmRsZVNlZWRJZCI6ImNvbS5yYWsuUkFLV2lzQ29yZSIsImJ1bmRsZUlkIjoiY29tLnJhay5SQUtXaXNDb3JlIiwiaXNzIjoiQW1hem9uIiwidHlwZSI6IkFQSUtleSIsImFwcFZhcmlhbnRJZCI6ImFtem4xLmFwcGxpY2F0aW9uLWNsaWVudC5lZjA4YTIyNDQ5ZDc0YThlOTU4M2M2ZGVlN2I3ZDI5ZCIsInRydXN0UG9vbCI6bnVsbCwiYXBwSWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1jbGllbnQuZWYwOGEyMjQ0OWQ3NGE4ZTk1ODNjNmRlZTdiN2QyOWQiLCJpZCI6IjI4M2MwZDM3LTM0N2QtMTFlNy1hY2RhLTAzMzFkMThiNTdkZCIsImlhdCI6IjE0OTQzMDk3ODA5MDAifQ==.C6+txWF/ijl7wdhDkapevmPYpQ366HqigKLN66sNuomvIsHPxDSfLEL3DIjN+y0bCJpl7cLJ0IiKYHfYAhPHijhgVoXVX1+Rwsbf+687l9iBUriHL2FYGKmK7qLDrQgxRK20X00dIQB2Mnhk0QURPny9fboLrO/1MqJuKYAuaxBHEk4VP90fabhG2OauBLyF2Pd0deR3GtOpXog08wnxqBIebujlPP4zOfyCTK/xVznThVFdhG4/D4AE1hFYVL0pYdyzwndGDBqF+4knqsgjEvsMegordlx++9ZN+aE8hU65tErWFgyZ5+U5emTtuzQ+j0HR3DZSDUvTPhfcL5DULQ==</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.3</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>app-Prefs</string>
+				<string>prefs</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.rak.RAKWisCore</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>amzn-com.rak.RAKWisCore</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Do you allow this APP to access your media information?</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Do you allow this APP to use your camera?</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Do you allow this APP to connect usage description?</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Always open location service</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Temporary open location service</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Do you allow this APP to use your microphone?</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Do you allow this APP to access your album?</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+</dict>
+</plist>

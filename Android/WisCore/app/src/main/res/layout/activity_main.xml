@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+    <RelativeLayout
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground">
+        <com.rak.wiscore.component.MainMenuButton
+            android:id="@+id/main_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:src="@drawable/menu_nor"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_title"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/activity_choose_module_title_size"
+            android:textColor="@color/colorChooseModuleTitle"/>
+
+        <com.rak.wiscore.component.MainMenuButton
+            android:id="@+id/main_refresh_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/refresh_nor"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="40dp">
+        <com.rak.wiscore.component.MainMenuButton
+            android:id="@+id/main_device_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_device_selector"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/main_app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/main_title"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/activity_choose_module_text_size"
+        android:textColor="@color/colorApAddNote"/>
+
+    <com.rak.wiscore.SwipeListview.library.PullToRefreshSwipeMenuListView
+        android:id="@+id/main_device_listView"
+        android:layout_width="match_parent"
+        android:divider="@color/colorDeviceBackgroundBody"
+        android:dividerHeight="1dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/main_add"
+        android:layout_below="@+id/main_title"/>
+
+    <com.rak.wiscore.component.Loading
+        android:id="@+id/main_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+    </com.rak.wiscore.component.Loading>
+
+    <TextView
+        android:id="@+id/main_note"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        android:text="@string/main_scan_no_device"
+        android:textSize="@dimen/activity_choose_module_title_size"
+        android:textColor="@color/colorTextColor"/>
+</RelativeLayout>

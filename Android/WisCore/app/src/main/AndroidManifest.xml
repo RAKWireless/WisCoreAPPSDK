@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rak.wiscore">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <activity
+            android:name=".ApAddStep1Activity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <activity
+            android:name=".ApAddStep2Activity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <activity
+            android:name=".ApAddStep3Activity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <activity
+            android:name=".ApAddWaitActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <activity
+            android:name=".ApAddEndActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <activity
+            android:name=".DeviceViewActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <activity
+            android:name=".DeviceInformationActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <activity
+            android:name=".DeviceNetworkActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <activity
+            android:name=".DeviceSignInActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <activity
+            android:name=".DeviceSignOutActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <activity
+            android:name="com.amazon.identity.auth.device.workflow.WorkflowActivity"
+            android:allowTaskReparenting="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!-- android:host must use the full package name found in Manifest General Attributes -->
+                <data
+                    android:host="${applicationId}"
+                    android:scheme="amzn"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="com.google.android.maps"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"></uses-permission>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+</manifest>

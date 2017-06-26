@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.rak.wiscore"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 3
+        versionName "1.0.3"
+    }
+    signingConfigs {
+        release {
+            storeFile file("../wiscore.jks")
+            storePassword "12345678"
+            keyAlias "rak"
+            keyPassword "12345678"
+        }
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+        release {
+            debuggable false
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+/*
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+        }
+    }
+*/
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile files('libs/httpclient-4.2.5.jar')
+    compile files('libs/library_pulltorefreshswipemenulistview.jar')
+    compile files('libs/android-support-v4.jar')
+    compile files('libs/login-with-amazon-sdk.jar')
+}

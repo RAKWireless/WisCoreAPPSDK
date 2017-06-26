@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBackground">#F8F9FA</color>
+    <color name="colorBackgroundBody">#F4F6F7</color>
+    <color name="colorChooseModuleTitle">#212529</color>
+    <color name="colorChooseModuleText">#8E8F98</color>
+    <color name="colorChooseModuleType">#4F576D</color>
+    <color name="colorChooseModuleBtn">#5D6FA7</color>
+    <color name="colorMainAddNote">#96A3AE</color>
+    <color name="colorMenuSelector">#EEF0F1</color>
+    <color name="colorMenuCopyright">#B4B5BA</color>
+    <color name="colorApAddNote">#B4B5BA</color>
+    <color name="colorApAddSettings">#F1952C</color>
+    <color name="colorContactColor">#C6C6C6</color>
+    <color name="colorDeleteColor">#A0ACB6</color>
+    <color name="colorTitleColor">#339BE6</color>
+    <color name="colorTextColor">#343A40</color>
+    <color name="colorWaitBgColor">#3BC9D8</color>
+    <color name="colorEndTextColor">#38D9A9</color>
+    <color name="colorEndText2Color">#868E96</color>
+    <color name="colorDeviceBackgroundBody">#F1F3F5</color>
+    <color name="colorDeviceClickBackground">#E9ECEF</color>
+    <color name="colorAlexaLineBackground">#D1D6D7</color>
+    <color name="colorAlexaNoteBackground">#798889</color>
+    <color name="colorAlexaSignOut">#1AA6CD</color>
+</resources>
