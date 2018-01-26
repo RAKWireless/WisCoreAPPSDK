@@ -26,7 +26,8 @@ public class ApConfig {
 	public static int FAC_RESET_DEVICE = 7;
 	public static int RESET_NET = 8;
 	public static int GET_WIFI_STATUS = 9;
-	public static int Alexa_Sign_Out = 4;
+	public static int Alexa_Sign_Out = 10;
+	public static int GET_LOGIN_STATUS = 11;
 
 	private String _ip;
 	private String _username = "admin";
@@ -293,5 +294,12 @@ public class ApConfig {
 	 */
 	public void getWifiStatus() {
 		get("http://" + _ip + "/server.command?command=get_wifistatus","", GET_WIFI_STATUS);
+	}
+
+	/**
+	 * 获取模块Alexa登录状态
+	 */
+	public void getLoginStatus() {
+		get("http://" + _ip + "/server.command?command=islogin","", GET_LOGIN_STATUS);
 	}
 }

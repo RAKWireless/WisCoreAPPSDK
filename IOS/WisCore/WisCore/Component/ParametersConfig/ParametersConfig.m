@@ -207,4 +207,15 @@
     [self get];
 }
 
+/**
+ * Description: Get Alexa login status.
+ * Return: 0:not login -1:login.
+ */
+- (void)alexaLoginStatus{
+    _type=GET_LOGIN_STATUS;
+    _body=nil;
+    _url=[NSString stringWithFormat:@"http://%@/server.command?command=islogin",_ip];
+    [self get];
+}
+
 @end

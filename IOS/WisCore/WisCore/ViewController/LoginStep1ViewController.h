@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ParametersConfig.h"
 
-@interface LoginStep1ViewController : UIViewController<ParametersConfigDelegate>
+@interface LoginStep1ViewController : UIViewController<ParametersConfigDelegate,UIAlertViewDelegate>
 {
     UIView *_topBg;
     UIButton *_backBtn;

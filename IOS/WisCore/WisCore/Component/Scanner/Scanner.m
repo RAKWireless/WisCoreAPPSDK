@@ -75,7 +75,7 @@ static ScanDeviceStatus scanStatus = ScanStoped;
     self.scanSendData = [[NSData alloc] initWithBytes:_ScanSendByte length:14];
     //NSLog(@"_ScanSendData:%@",_ScanSendData);
     self.routerIP = [self routerIp];
-    
+    NSLog(@"start scan ip=%@",self.routerIP);
     self.scanSocket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0)];
     NSError *error = nil;
     [self.scanSocket bindToPort:12345 error: &error];
@@ -109,12 +109,12 @@ static ScanDeviceStatus scanStatus = ScanStoped;
 }
 - (void) SendScanData
 {
-    //    NSLog(@"scan.");
     [self.scanSocket sendData:self.scanSendData toHost:self.routerIP port:5570 withTimeout:-1 tag:1];
     if (scanStatus == ScanStart){
         const dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 0.1f * NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^(void){
             [self SendScanData];
+            [self.scanSocket beginReceiving:nil];
         });
     }
 }
@@ -127,12 +127,14 @@ typedef struct
     uint8_t localport[2];
     uint8_t dataload[100];
 } NabtoScanRecv;
-//- (void)udpSocket:(GCDAsyncUdpSocket *)sock didSendDataWithTag:(long)tag{
-//    NSLog(@"send success tag : %d",(int)tag);
-//}
+
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock didSendDataWithTag:(long)tag{
+    //NSLog(@"send scan success tag : %d",(int)tag);
+}
+
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didReceiveData:(NSData *)data fromAddress:(NSData *)address withFilterContext:(id)filterContext
 {
-    //NSLog(@"data:%@",data);
+    //NSLog(@"scan data:%@",data);
     if (data==nil) {
         return;
     }
@@ -186,9 +188,12 @@ typedef struct
             isRecving = NO;
             return;
         }
-        //NSLog(@"LX520log-> ip: %@ id: %@",_ip,nabtoid);
-        [self.m_deviceIP addObject: _ip];
-        [self.m_deviceID addObject: nabtoid];
+        NSLog(@"LX520log-> ip: %@ id: %@",_ip,nabtoid);
+        if (_ip != NULL) {
+            [self.m_deviceIP addObject: _ip];
+            [self.m_deviceID addObject: nabtoid];
+        }
+        
         _ip = nil;
         nabtoid = nil;
         _RecvInfo = nil;

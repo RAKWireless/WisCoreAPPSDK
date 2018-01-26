@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParametersConfig.h"
 
-@interface DeviceViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface DeviceViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,ParametersConfigDelegate>
 {
     UIView *_topBg;
     UIButton *_backBtn;
@@ -20,4 +21,5 @@
 
 @property (retain, nonatomic) NSString* deviceName;
 @property (retain, nonatomic) NSString* deviceIp;
+@property (retain, nonatomic) ParametersConfig* deviceViewParametersConfig;
 @end

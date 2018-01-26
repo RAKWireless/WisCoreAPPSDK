@@ -234,6 +234,29 @@
         [AIMobileLib authorizeUserForScopes:requestScopes delegate:self options:options];
     });
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    switch (buttonIndex) {
+        case 0:
+            NSLog(@"点击了确定按钮");
+            break;
+        case 1:
+            NSLog(@"点击了取消按钮");
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)openURL:(NSURL*)url options:(NSDictionary<NSString *, id> *)options completionHandler:(void (^ __nullable)(BOOL success))completion{
+//    if (success) {
+//        NSLog(@"点击了确定按钮");
+//    }
+//    else{
+//        NSLog(@"点击了取消按钮");
+//    }
+}
+
 // 0104YCHGcmw
 -(void)timeOut{
     NSLog(@"alexa timeOut........");

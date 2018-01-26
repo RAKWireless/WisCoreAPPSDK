@@ -8,7 +8,7 @@
 
 #import "ApAddWaitViewController.h"
 #import "CommanParameters.h"
-#import "Rak_Lx52x_Device_Control.h"
+#import "Scanner.h"
 #import "DeviceData.h"
 #import "DeviceInfo.h"
 #import "ApAddEndViewController.h"
@@ -19,7 +19,7 @@
     NSTimer *_scanTimer;
     bool _isExit;
     bool _isConfigured;
-    Rak_Lx52x_Device_Control *_deviceScan;
+    Scanner *_deviceScan;
     DeviceData *_deviceData;
 }
 @end
@@ -131,8 +131,8 @@
 
 - (void)scanDeviceTask
 {
-    _deviceScan = [[Rak_Lx52x_Device_Control alloc] init];
-    Lx52x_Device_Info *result = [_deviceScan ScanDeviceWithTime:1.5f];
+    _deviceScan = [[Scanner alloc] init];
+    Scanner *result = [_deviceScan ScanDeviceWithTime:1.5f];
     [self performSelectorOnMainThread:@selector(scanDeviceOver:) withObject:result waitUntilDone:NO];
 }
 
@@ -182,7 +182,7 @@
     }
 }
 
-- (void)scanDeviceOver:(Lx52x_Device_Info *)result;
+- (void)scanDeviceOver:(Scanner *)result;
 {
     if (result.Device_ID_Arr.count > 0) {
         NSLog(@"Scan Over...");

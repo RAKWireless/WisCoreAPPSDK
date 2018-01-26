@@ -133,7 +133,10 @@
     [str addAttribute:NSForegroundColorAttributeName value:LOGIN_TEXT_COLOR range:NSMakeRange(59,9)];
     _logoutInfo.attributedText=str;
     _logoutInfo.numberOfLines = 0;
+    _logoutInfo.userInteractionEnabled=YES;
+    UITapGestureRecognizer *labelTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(_logoutInfoTouchUpInside)];
     _logoutInfo.lineBreakMode = UILineBreakModeWordWrap;
+    [_logoutInfo addGestureRecognizer:labelTapGestureRecognizer];
     _logoutInfo.textAlignment=NSTextAlignmentCenter;
     [_mainBg addSubview:_logoutInfo];
     
@@ -146,6 +149,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)_logoutInfoTouchUpInside{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/amazon-alexa/id944011620?mt=8"]];
 }
 
 //Listen
@@ -166,13 +173,14 @@
                 [CommanParameters showAllTextDialog:self.view :NSLocalizedString(@"main_logout_sign_out_failed", nil)];
             }
         });
-        
     }
 }
 
 - (void)_backBtnClick{
     NSLog(@"_backBtnClick");
-    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
+    UIViewController *viewCtl = self.navigationController.viewControllers[1];
+    [self.navigationController popToViewController:viewCtl animated:YES];
 }
 
 - (void)_logoutBtnClick{

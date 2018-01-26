@@ -11,6 +11,7 @@
 #import "DeviceInformationViewController.h"
 #import "NetworkInformationViewController.h"
 #import "LoginStep1ViewController.h"
+#import "LogoutViewController.h"
 
 @interface DeviceViewController ()
 
@@ -68,6 +69,7 @@
     _deviceInfoTableview.backgroundColor=[UIColor whiteColor];
     _deviceInfoTableview.separatorInset=UIEdgeInsetsMake(0, 0, 0, 0);
     [_mainBg  addSubview:_deviceInfoTableview];
+    _deviceViewParametersConfig=[[ParametersConfig alloc]init:self ip:_deviceIp password:@"admin"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -139,15 +141,39 @@
         }
         case 2:
         {
-            LoginStep1ViewController *v = [[LoginStep1ViewController alloc] init];
-            v.loginStep1DeviceIp=_deviceIp;
-            [self.navigationController pushViewController: v animated:true];
+            [_deviceViewParametersConfig alexaLoginStatus];
             break;
         }
         default:
             break;
     }
     
+}
+
+//Listen
+-(void)setOnResultListener:(int)statusCode :(NSString*)body :(int)type{
+    if (type==GET_LOGIN_STATUS) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (statusCode==200) {
+                NSLog(@"%@",body);
+                if ([body isEqualToString:@"{\"value\": \"1\"}"]) {
+                    LogoutViewController *v = [[LogoutViewController alloc] init];
+                    v.loginOutStep1DeviceIp=_deviceIp;
+                    [self.navigationController pushViewController: v animated:true];
+                }
+                else{
+                    LoginStep1ViewController *v = [[LoginStep1ViewController alloc] init];
+                    v.loginStep1DeviceIp=_deviceIp;
+                    [self.navigationController pushViewController: v animated:true];
+                }
+            }
+            else{
+                LoginStep1ViewController *v = [[LoginStep1ViewController alloc] init];
+                v.loginStep1DeviceIp=_deviceIp;
+                [self.navigationController pushViewController: v animated:true];
+            }
+        });
+    }
 }
 
 

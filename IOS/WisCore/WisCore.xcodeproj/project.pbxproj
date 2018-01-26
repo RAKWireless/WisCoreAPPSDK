@@ -13,7 +13,6 @@
 		8425EB511EAEE92A006FCAD9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8425EB501EAEE92A006FCAD9 /* libz.tbd */; };
 		8425EB531EAEE933006FCAD9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8425EB521EAEE933006FCAD9 /* Security.framework */; };
 		84292D451EAC8F28005FABD0 /* ApAddWaitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84292D441EAC8F28005FABD0 /* ApAddWaitViewController.m */; };
-		84292D4A1EACC18F005FABD0 /* libRakDeviceControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84292D471EACC18F005FABD0 /* libRakDeviceControl.a */; };
 		84292D501EACE36C005FABD0 /* AMZNAuthorizeUserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84292D4E1EACE36C005FABD0 /* AMZNAuthorizeUserDelegate.m */; };
 		84292D511EACE36C005FABD0 /* LoginWithAmazon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84292D4F1EACE36C005FABD0 /* LoginWithAmazon.framework */; };
 		8432777D1EA6FA9500C68FC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432777C1EA6FA9500C68FC9 /* main.m */; };
@@ -77,6 +76,7 @@
 		84AFCC8C1EB1E9D0008DE7C2 /* 46.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AFCC5C1EB1E9D0008DE7C2 /* 46.png */; };
 		84AFCC8D1EB1E9D0008DE7C2 /* 47.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AFCC5D1EB1E9D0008DE7C2 /* 47.png */; };
 		84AFCC911EB1EA5D008DE7C2 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFCC901EB1EA5D008DE7C2 /* LoadingView.m */; };
+		84CDE45720106E34001607D5 /* Scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CDE45520106E34001607D5 /* Scanner.m */; };
 		84CE651A1EAAF732006643B7 /* ParametersConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CE65191EAAF732006643B7 /* ParametersConfig.m */; };
 		84F3B3B31EA860DA000551D7 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3B31E1EA860DA000551D7 /* GCDAsyncSocket.m */; };
 		84F3B3B41EA860DA000551D7 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3B31F1EA860DA000551D7 /* GCDAsyncUdpSocket.m */; };
@@ -236,6 +236,7 @@
 		84F3B4A61EA8F4E0000551D7 /* NetworkInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3B4A51EA8F4E0000551D7 /* NetworkInformationViewController.m */; };
 		84F3B4A91EA8FFBD000551D7 /* LoginStep1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3B4A81EA8FFBD000551D7 /* LoginStep1ViewController.m */; };
 		84F3B4AC1EA906FC000551D7 /* LogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3B4AB1EA906FC000551D7 /* LogoutViewController.m */; };
+		84F46B851FF0E40D0090E526 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F46B841FF0E40C0090E526 /* TTTAttributedLabel.m */; };
 		84FDCDB31EAD9D1600696454 /* refresh_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FDCDAD1EAD9D1600696454 /* refresh_nor.png */; };
 		84FDCDB41EAD9D1600696454 /* refresh_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FDCDAE1EAD9D1600696454 /* refresh_nor@2x.png */; };
 		84FDCDB51EAD9D1600696454 /* refresh_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FDCDAF1EAD9D1600696454 /* refresh_nor@3x.png */; };
@@ -269,9 +270,6 @@
 		8425EB521EAEE933006FCAD9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		84292D431EAC8F28005FABD0 /* ApAddWaitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApAddWaitViewController.h; sourceTree = "<group>"; };
 		84292D441EAC8F28005FABD0 /* ApAddWaitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApAddWaitViewController.m; sourceTree = "<group>"; };
-		84292D471EACC18F005FABD0 /* libRakDeviceControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libRakDeviceControl.a; sourceTree = "<group>"; };
-		84292D481EACC18F005FABD0 /* Lx52x_Device_Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lx52x_Device_Info.h; sourceTree = "<group>"; };
-		84292D491EACC18F005FABD0 /* Rak_Lx52x_Device_Control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rak_Lx52x_Device_Control.h; sourceTree = "<group>"; };
 		84292D4D1EACE36C005FABD0 /* AMZNAuthorizeUserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMZNAuthorizeUserDelegate.h; sourceTree = "<group>"; };
 		84292D4E1EACE36C005FABD0 /* AMZNAuthorizeUserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMZNAuthorizeUserDelegate.m; sourceTree = "<group>"; };
 		84292D4F1EACE36C005FABD0 /* LoginWithAmazon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithAmazon.framework; sourceTree = "<group>"; };
@@ -346,6 +344,8 @@
 		84AFCC5D1EB1E9D0008DE7C2 /* 47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 47.png; sourceTree = "<group>"; };
 		84AFCC8F1EB1EA5D008DE7C2 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		84AFCC901EB1EA5D008DE7C2 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		84CDE45420106E34001607D5 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		84CDE45520106E34001607D5 /* Scanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scanner.m; sourceTree = "<group>"; };
 		84CE65181EAAF732006643B7 /* ParametersConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParametersConfig.h; sourceTree = "<group>"; };
 		84CE65191EAAF732006643B7 /* ParametersConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametersConfig.m; sourceTree = "<group>"; };
 		84F3B31E1EA860DA000551D7 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
@@ -532,6 +532,8 @@
 		84F3B4A81EA8FFBD000551D7 /* LoginStep1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginStep1ViewController.m; sourceTree = "<group>"; };
 		84F3B4AA1EA906FC000551D7 /* LogoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutViewController.h; sourceTree = "<group>"; };
 		84F3B4AB1EA906FC000551D7 /* LogoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutViewController.m; sourceTree = "<group>"; };
+		84F46B831FF0E40C0090E526 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		84F46B841FF0E40C0090E526 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		84FDCDAD1EAD9D1600696454 /* refresh_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_nor.png; sourceTree = "<group>"; };
 		84FDCDAE1EAD9D1600696454 /* refresh_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_nor@2x.png"; sourceTree = "<group>"; };
 		84FDCDAF1EAD9D1600696454 /* refresh_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_nor@3x.png"; sourceTree = "<group>"; };
@@ -550,7 +552,6 @@
 				8425EB4F1EAEE91F006FCAD9 /* libxml2.tbd in Frameworks */,
 				8425EB4D1EAEE919006FCAD9 /* libxml2.2.tbd in Frameworks */,
 				8425EB4B1EAEE911006FCAD9 /* SafariServices.framework in Frameworks */,
-				84292D4A1EACC18F005FABD0 /* libRakDeviceControl.a in Frameworks */,
 				84F3B45A1EA867F4000551D7 /* SystemConfiguration.framework in Frameworks */,
 				84F3B4581EA867EC000551D7 /* UIKit.framework in Frameworks */,
 				84F3B4561EA867E5000551D7 /* libbz2.tbd in Frameworks */,
@@ -584,16 +585,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		84292D461EACC18F005FABD0 /* deviceScan */ = {
-			isa = PBXGroup;
-			children = (
-				84292D471EACC18F005FABD0 /* libRakDeviceControl.a */,
-				84292D481EACC18F005FABD0 /* Lx52x_Device_Info.h */,
-				84292D491EACC18F005FABD0 /* Rak_Lx52x_Device_Control.h */,
-			);
-			path = deviceScan;
-			sourceTree = "<group>";
-		};
 		84292D4C1EACE36C005FABD0 /* AmazonAlexa */ = {
 			isa = PBXGroup;
 			children = (
@@ -744,6 +735,15 @@
 			path = Loading;
 			sourceTree = "<group>";
 		};
+		84CDE45120106E34001607D5 /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				84CDE45420106E34001607D5 /* Scanner.h */,
+				84CDE45520106E34001607D5 /* Scanner.m */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
 		84CE65171EAAF732006643B7 /* ParametersConfig */ = {
 			isa = PBXGroup;
 			children = (
@@ -756,8 +756,9 @@
 		84F3B3141EA860DA000551D7 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				84CDE45120106E34001607D5 /* Scanner */,
+				84F46B821FF0E40C0090E526 /* TTTAttributedLabel */,
 				84AFCC8E1EB1EA5D008DE7C2 /* Loading */,
-				84292D461EACC18F005FABD0 /* deviceScan */,
 				84CE65171EAAF732006643B7 /* ParametersConfig */,
 				8434E34C1EAA4EA900DFD529 /* DeviceData */,
 				84F3B47C1EA8937A000551D7 /* RotateNavigationController */,
@@ -1052,6 +1053,15 @@
 				84F3B47E1EA8937A000551D7 /* RotateNavigationControllerViewController.m */,
 			);
 			path = RotateNavigationController;
+			sourceTree = "<group>";
+		};
+		84F46B821FF0E40C0090E526 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				84F46B831FF0E40C0090E526 /* TTTAttributedLabel.h */,
+				84F46B841FF0E40C0090E526 /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1387,6 +1397,7 @@
 				84F3B3B71EA860DA000551D7 /* HttpRequest.m in Sources */,
 				84F3B4851EA8A017000551D7 /* ApAddStep2ViewController.m in Sources */,
 				84F3B4881EA8ADFC000551D7 /* APAddStep3ViewController.m in Sources */,
+				84CDE45720106E34001607D5 /* Scanner.m in Sources */,
 				84292D501EACE36C005FABD0 /* AMZNAuthorizeUserDelegate.m in Sources */,
 				84F3B3BC1EA860DA000551D7 /* MBProgressHUD.m in Sources */,
 				84F3B3BB1EA860DA000551D7 /* SWRevealViewController.m in Sources */,
@@ -1402,6 +1413,7 @@
 				84F3B4A61EA8F4E0000551D7 /* NetworkInformationViewController.m in Sources */,
 				8432777D1EA6FA9500C68FC9 /* main.m in Sources */,
 				84F3B4821EA8961A000551D7 /* MenuViewController.m in Sources */,
+				84F46B851FF0E40D0090E526 /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1573,14 +1585,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen RAKwireless Technology Co.,Ltd. (DSSE2DS52M)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiao juan wu (4WLT42Z4M6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DSSE2DS52M;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WisCore/AmazonAlexa",
 					"$(PROJECT_DIR)/WisCore",
+					"$(PROJECT_DIR)/WisCore/framework",
 				);
 				INFOPLIST_FILE = WisCore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1603,15 +1617,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen RAKwireless Technology Co.,Ltd. (DSSE2DS52M)";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Shenzhen RAKwireless Technology Co.,Ltd. (DSSE2DS52M)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiao juan wu (4WLT42Z4M6)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: xiao juan wu (4WLT42Z4M6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DSSE2DS52M;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WisCore/AmazonAlexa",
 					"$(PROJECT_DIR)/WisCore",
+					"$(PROJECT_DIR)/WisCore/framework",
 				);
 				INFOPLIST_FILE = WisCore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

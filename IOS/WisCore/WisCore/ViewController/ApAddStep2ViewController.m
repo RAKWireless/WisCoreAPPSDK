@@ -9,13 +9,13 @@
 #import "ApAddStep2ViewController.h"
 #import "CommanParameters.h"
 #import "ApAddWaitViewController.h"
-#import "Rak_Lx52x_Device_Control.h"
+#import "Scanner.h"
 #import "CommanParameters.h"
 #import "LoadingView.h"
 
 @interface ApAddStep2ViewController ()
 {
-    Rak_Lx52x_Device_Control *_device_Scan;
+    Scanner *_device_Scan;
     LoadingView *_loadingView;
     BOOL _isExit;
 }
@@ -172,12 +172,12 @@
 
 - (void)scanDeviceTask
 {
-    _device_Scan = [[Rak_Lx52x_Device_Control alloc] init];
-    Lx52x_Device_Info *result = [_device_Scan ScanDeviceWithTime:1.5f];
+    _device_Scan = [[Scanner alloc] init];
+    Scanner *result = [_device_Scan ScanDeviceWithTime:1.5f];
     [self performSelectorOnMainThread:@selector(scanDeviceOver:) withObject:result waitUntilDone:NO];
 }
 
-- (void)scanDeviceOver:(Lx52x_Device_Info *)result;
+- (void)scanDeviceOver:(Scanner *)result;
 {
     if (result.Device_ID_Arr.count > 0) {
         NSLog(@"Scan Over...");

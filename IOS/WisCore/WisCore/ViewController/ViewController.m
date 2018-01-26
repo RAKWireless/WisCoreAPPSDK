@@ -13,14 +13,14 @@
 #import "DeviceViewController.h"
 #import "DeviceData.h"
 #import "DeviceInfo.h"
-#import "Rak_Lx52x_Device_Control.h"
+#import "Scanner.h"
 #import "LoadingView.h"
 
 @interface ViewController ()
 {
     LoadingView *_loadingView;
     bool _isExit;
-    Rak_Lx52x_Device_Control *_deviceScan;
+    Scanner *_deviceScan;
     DeviceData *_deviceData;
     NSMutableArray *_collection_Items;
     NSMutableArray *_local_Items;
@@ -139,7 +139,7 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     _isExit=NO;
-    _deviceScan = [[Rak_Lx52x_Device_Control alloc] init];
+    _deviceScan = [[Scanner alloc] init];
     [self scanDevice];
     
     _collection_Items=[[NSMutableArray alloc]init];
@@ -358,11 +358,11 @@
 
 - (void)scanDeviceTask
 {
-    Lx52x_Device_Info *result = [_deviceScan ScanDeviceWithTime:1.5f];
+    Scanner *result = [_deviceScan ScanDeviceWithTime:1.5f];
     [self performSelectorOnMainThread:@selector(scanDeviceOver:) withObject:result waitUntilDone:NO];
 }
 
-- (void)scanDeviceOver:(Lx52x_Device_Info *)result;
+- (void)scanDeviceOver:(Scanner *)result;
 {
     NSMutableArray *_deviceInfos=[_deviceData getDeviceIds];
     if (result.Device_ID_Arr.count > 0) {

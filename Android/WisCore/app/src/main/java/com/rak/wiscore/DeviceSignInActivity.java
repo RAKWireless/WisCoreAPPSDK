@@ -242,7 +242,13 @@ public class DeviceSignInActivity extends AppCompatActivity {
 		@Override
 		public void onError(final AuthError authError) {
 			Log.e("==>","error");
-			_signInLoad.setVisibility(View.GONE);
+			runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					_signInLoad.setVisibility(View.GONE);
+				}
+			});
+
 			if(timer!=null)
 			{
 				timer.cancel();//关闭定时器
@@ -255,7 +261,12 @@ public class DeviceSignInActivity extends AppCompatActivity {
 		/* Authorization was cancelled before it could be completed. */
 		@Override
 		public void onCancel(final AuthCancellation authCancellation) {
-			_signInLoad.setVisibility(View.GONE);
+			runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					_signInLoad.setVisibility(View.GONE);
+				}
+			});
 			if(timer!=null)
 			{
 				timer.cancel();//关闭定时器

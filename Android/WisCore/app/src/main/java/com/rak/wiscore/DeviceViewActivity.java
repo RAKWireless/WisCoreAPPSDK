@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.rak.wiscore.component.ApConfig;
 import com.rak.wiscore.component.MainMenuButton;
 
 public class DeviceViewActivity extends AppCompatActivity {
@@ -18,6 +20,7 @@ public class DeviceViewActivity extends AppCompatActivity {
 	private LinearLayout _deviceViewAlexa;
 	private String name;
 	private String ip;
+	private ApConfig _deviceViewAPConfig;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -63,10 +66,37 @@ public class DeviceViewActivity extends AppCompatActivity {
 		_deviceViewAlexa.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent=new Intent();
-				intent.putExtra("ip",ip);
-				intent.setClass(DeviceViewActivity.this,DeviceSignInActivity.class);
-				startActivity(intent);
+				_deviceViewAPConfig=new ApConfig(ip,"admin");
+				_deviceViewAPConfig.setOnResultListener(new ApConfig.OnResultListener() {
+					@Override
+					public void onResult(final ApConfig.Response result) {
+						runOnUiThread(new Runnable() {
+							@Override
+							public void run() {
+								if (result.type==ApConfig.GET_LOGIN_STATUS){
+									if (result.statusCode==200){
+										Intent intent=new Intent();
+										intent.putExtra("ip",ip);
+										if (result.body.equals("{\"value\": \"1\"}")){
+											intent.setClass(DeviceViewActivity.this,DeviceSignOutActivity.class);
+										}
+										else{
+											intent.setClass(DeviceViewActivity.this,DeviceSignInActivity.class);
+										}
+										startActivity(intent);
+									}
+									else{
+										Intent intent=new Intent();
+										intent.putExtra("ip",ip);
+										intent.setClass(DeviceViewActivity.this,DeviceSignInActivity.class);
+										startActivity(intent);
+									}
+								}
+							}
+						});
+					}
+				});
+				_deviceViewAPConfig.getLoginStatus();
 			}
 		});
 	}

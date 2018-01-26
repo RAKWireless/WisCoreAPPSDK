@@ -30,7 +30,8 @@ typedef enum {
     ALEXA_SEND_CODE,
     ALEXA_SIGN_OUT,
     RESTART,
-    RESTART_NET
+    RESTART_NET,
+    GET_LOGIN_STATUS
 } RequestType;
 
 - (void)updateUsernameAndPassword:(NSString*)newUsername :(NSString*)newPassword;
@@ -45,4 +46,5 @@ typedef enum {
 - (void)alexaSignOut;
 - (void)restart;
 - (void)restartNet;
+- (void)alexaLoginStatus;
 @end
